@@ -1,0 +1,37 @@
+{
+  "name": "food_delivery",
+  "version": "1.0.0",
+  "description": "This is food delivery app",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajratnmore/food_delivery.git"
+  },
+  "keywords": [],
+  "author": "rajratn more",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajratnmore/food_delivery/issues"
+  },
+  "homepage": "https://github.com/rajratnmore/food_delivery#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.17",
+    "parcel": "^2.11.0",
+    "postcss": "^8.4.35",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.0"
+  },
+  "browerslist": [
+    "last 2 versions"
+  ]
+}
