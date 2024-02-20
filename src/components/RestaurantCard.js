@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import CDN_URL from "../utils/CDN_URL";
+import {CDN_URL} from "../utils/CDN_URL";
 
 const RestaurantCard = (props) => {
     const resCard = props.resCard;

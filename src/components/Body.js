@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import RestaurantCardContainer from "./RestaurantCardContainer";
 import CardSearch from "./CardSearch";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
     
@@ -13,7 +14,7 @@ const Body = () => {
     };
 
     const filteredTopRatedRestaurant = () => {
-        setListOfRestaurant(listOfRestaurant.filter( (restaurantCard) => (restaurantCard.avgRating > 4.5)));
+        setFilteredListOfRestaurant(listOfRestaurant.filter( (restaurantCard) => (restaurantCard.avgRating >= 4)));
     }
 
     useEffect( () => {
@@ -24,6 +25,9 @@ const Body = () => {
     const fetchData = async () => {
         try{
             const response = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.5204303&lng=73.8567437&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_");
+            if(!response.ok){
+                throw new Error('Failed to fetch data');
+            }
             const json = await response.json();
             setListOfRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants.map((restaurant) => (restaurant.info)));
             setFilteredListOfRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants.map((restaurant) => (restaurant.info)));
@@ -34,7 +38,7 @@ const Body = () => {
     };
 
     if(listOfRestaurant.length == 0){
-        return <h1>Page is being loaded</h1>
+        return (<Shimmer />)
     }
 
     return (

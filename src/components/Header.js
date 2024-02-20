@@ -1,6 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
 import { Link } from "react-router-dom";
+import { LOGO } from "../utils/CDN_URL";
 
 const Header = (props) => {
     
@@ -11,7 +11,7 @@ const Header = (props) => {
             <div className="container h-20 flex justify-between items-center ">
                 {/* logo here */}
                 <div className="">
-                    <img className="w-[70px] h-[70px] rounded-lg" src="https://cdn1.vectorstock.com/i/1000x1000/24/10/love-food-logo-design-vector-34122410.jpg" />
+                    <img className="w-[70px] h-[70px] rounded-lg" src={LOGO} />
                 </div>
                 
                 {/* navbar here */}
