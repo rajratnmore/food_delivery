@@ -19,6 +19,7 @@
   "homepage": "https://github.com/rajratnmore/food_delivery#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.17",
+    "buffer": "^6.0.3",
     "parcel": "^2.11.0",
     "postcss": "^8.4.35",
     "process": "^0.11.10",

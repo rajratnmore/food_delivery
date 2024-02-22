@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { MENU_API } from "./CDN_URL";
 
 const useRestaurantMenu = (resId) => {
+
     const [resInfo, setResInfo] = useState(null);
     
     useEffect( () => {
